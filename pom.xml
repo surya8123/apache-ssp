@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>CubeGeneratorWeb</finalName>
+    <finalName>CubeGeneratorWeb-${build.number}</finalName>
   </build>
 </project>
