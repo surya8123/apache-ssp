@@ -14,7 +14,7 @@ try {
    
    stage('Deploy') {
        
-        sh "/bin/mv $WORKSPACE/target/*.war /opt/tomcat/webapps/"
+        sh "/bin/mv -f $WORKSPACE/target/*.war /opt/tomcat/webapps/"
     }
 
   }
