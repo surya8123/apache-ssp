@@ -8,7 +8,7 @@ stage('Retrieve source code') {
 try {
     stage('Maven Build') {
       docker.image('maven:3.5-jdk-8-alpine').inside {
-        sh "mvn clean package"
+        sh "mvn clean package -Dbuild.number=${BUILD_NUMBER}"
        }   
     }  
    
