@@ -15,6 +15,7 @@ try {
    stage('Deploy') {
        
         sh 'mv $WORKSPACE/target/*.war /opt/tomcat/webapps/'
+    }
 
   }
   catch (e) {
