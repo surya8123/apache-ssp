@@ -11,6 +11,11 @@ try {
         sh "mvn clean package"
        }   
     }  
+   
+   stage('Deploy') {
+       
+        sh 'mv $WORKSPACE/target/*.war /opt/tomcat/webapps/'
+
   }
   catch (e) {
       currentBuild.result = "FAILED"
