@@ -17,9 +17,6 @@ try {
       delivery.notifyFailure(e.getMessage())
       throw e
     }
-    finally {
-      junit 'target/surefire-reports/*.xml'
-    }
 
 }
 
