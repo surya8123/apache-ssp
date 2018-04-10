@@ -1,16 +1,9 @@
-def callS3Upload(mesg){
-  stage("${mesg}"){
-  withAWS(credentials:'mobile-s3-user', region:'ap-south-1') {
-    s3Upload(acl: 'PublicRead', bucket: 'mybucket-ssp', cacheControl: '', excludePathPattern: '', file: "sspWebApp-${env.BUILD_NUMBER}", metadatas: [''], path: "${env.BRANCH_NAME}/sspWebApp-${env.BUILD_NUMBER}")
-  }
-  }
-}
-
 
 node() {
 
 stage('Retrieve source code') {
     checkout scm
+    delivery = load 'repository.groovy'
     }
 
 
@@ -23,7 +16,7 @@ try {
     
    stage('Artifactory') {
 
-     callS3Upload("Upload to S3")
+   delivery.artifactory()
 
    }  
    
