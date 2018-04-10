@@ -2,9 +2,7 @@
 <html>
 <body style="background-color:powderblue;">
 
-<h1>Welcome To DevOps WorkShop</h1>
-<h3>This is the application which runnung inside the K8s</h3>
-<h3>Thank you ...!!</h3>
+<h1>Welcome To Apache Tomcat WebServer</h1>
 
 
 </body>
