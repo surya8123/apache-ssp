@@ -14,13 +14,12 @@ try {
    
    stage('Deploy') {
        
-        sh 'mv $WORKSPACE/target/*.war /opt/tomcat/webapps/'
+        sh "/bin/mv $WORKSPACE/target/*.war /opt/tomcat/webapps/"
     }
 
   }
   catch (e) {
       currentBuild.result = "FAILED"
-      delivery.notifyFailure(e.getMessage())
       throw e
     }
 
