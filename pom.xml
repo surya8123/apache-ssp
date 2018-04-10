@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sspcloudpro</groupId>
-  <artifactId>CubeGeneratorWeb</artifactId>
+  <artifactId>sspWebApp</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>CubeGeneratorWeb Maven Webapp</name>
+  <name>sspWebApp Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -42,7 +42,7 @@
         </configuration>
      </plugin>
 </plugins>
-    <finalName>CubeGeneratorWeb-${build.number}</finalName>
+    <finalName>sspWebApp-${build.number}</finalName>
   </build>
 </project>
 
