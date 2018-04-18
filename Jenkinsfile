@@ -1,6 +1,7 @@
 
 node() {
-
+// Delete the workspace
+deleteDir()
 stage('Retrieve source code') {
     checkout scm
     delivery = load 'repository.groovy'
