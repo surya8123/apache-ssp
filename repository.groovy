@@ -1,4 +1,4 @@
-
+#!/usr/bin/env groovy
 
 def callS3Upload(mesg){
   stage("${mesg}") {
