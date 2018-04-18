@@ -4,6 +4,7 @@ node() {
 stage('Retrieve source code') {
     checkout scm
     delivery = load 'repository.groovy'
+    sh " cd $WORKSPACE;/bin/mkdir Build-${env.BUILD_NUMBER} "
     }
 try {
     stage('Maven Build') {
