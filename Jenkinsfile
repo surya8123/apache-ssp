@@ -16,9 +16,8 @@ try {
    stage('Deploy') {
         sh "/bin/mv -f $WORKSPACE/Build-${env.BUILD_NUMBER}/sspWebApp_${env.BRANCH_NAME}${env.BUILD_NUMBER}.war /opt/tomcat/webapps/"
     }
-   stage('Artifactory') {
-        delivery.artifactory()
-      }
+  
+   delivery.artifactory()
   }
   catch (e) {
       currentBuild.result = "FAILED"
