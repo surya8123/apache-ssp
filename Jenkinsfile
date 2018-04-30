@@ -1,5 +1,5 @@
 
-node('slave123') {
+node('one2') {
 // Delete the workspace
 //deleteDir()
 stage('Retrieve source code') {
@@ -15,7 +15,7 @@ try {
        }
     }
    stage('Deploy') {
-        sh "/bin/cp -f $WORKSPACE/Build-${env.BUILD_NUMBER}/saimaven_${env.BRANCH_NAME}${env.BUILD_NUMBER}.war /opt/tomcat/apache-tomcat-8.5.30/webapps/saimaven.war"
+        sh "/bin/cp -f $WORKSPACE/Build-${env.BUILD_NUMBER}/saimaven_${env.BRANCH_NAME}${env.BUILD_NUMBER}.war /opt/apache-tomcat-9.0.7/webapps/saimaven.war"
     }
   
    delivery.artifactory()
