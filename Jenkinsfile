@@ -1,5 +1,5 @@
 
-node() {
+node(slave123) {
 // Delete the workspace
 //deleteDir()
 stage('Retrieve source code') {
