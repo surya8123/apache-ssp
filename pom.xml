@@ -42,7 +42,7 @@
         </configuration>
      </plugin>
 </plugins>
-    <finalName>sspWebApp-${build.number}</finalName>
+    <finalName>saimaven-${build.number}</finalName>
   </build>
 </project>
 
